@@ -1,9 +1,10 @@
 package book.store.bookstore.repository;
 
 import book.store.bookstore.model.Book;
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface BookRepository {
-    Book save(Book book);
-    List findAll();
+@Repository
+public interface BookRepository extends JpaRepository<Book, Long> {
+
 }
